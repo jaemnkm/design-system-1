@@ -24,6 +24,7 @@
     "lint:no-fail": "eslint .; exit 0",
     "octopus:deploy": "octopus-deploy-create-release-and-deploy",
     "octopus:publish": "gulp octopus-publish",
+    "prepublish": "find ./packages -name dist -type d -print0|xargs -0 rm -r --",
     "publish": "lerna publish --conventional-commits --message \"build: publish\"",
     "publish:beta": "npm run publish -- --npm-tag=beta",
     "site": "cd packages/site && npm start",
